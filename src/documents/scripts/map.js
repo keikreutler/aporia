@@ -141,6 +141,20 @@ var posts = [ { "type" : "Feature",
         "description": "They host lots of tech meetups, good wifi, Club Mate by donation."
             }
         },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9744770526886,
+          41.0237834232988
+        ]
+      },
+      "properties": {
+        "name": "SALT Galata",
+        "description": "Salt water, research, windows, coffee."
+            }
+        }
 ];
 
 
@@ -148,14 +162,14 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiZ2FtZXJhIiwiYSI6IjNlclVnZDAifQ.a8PjkEfE5i2aOS
 var layer = new L.StamenTileLayer("toner");
 var map = L.mapbox.map('map', 'extinctly.f3ad5588', {
     zoomControl: true,
-}).setView([52.5075419,13.4261419], 12);
+}).setView([41.0237834232988,28.9744770526886], 12);
 
 map.scrollWheelZoom.disable();
 
 map.addLayer(layer);
 
 var mapicon = L.icon({
-    iconUrl: 'img/icons/map_future.png',
+    iconUrl: '/images/icons/map_future.png',
     iconAnchor:   [12, 5],
 });
 

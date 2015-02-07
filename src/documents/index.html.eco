@@ -1,0 +1,38 @@
+---
+layout: 'default'
+---
+
+<div class="location">
+	FUTURE&nbsp;&nbsp;&nbsp;CONCRETE&nbsp;&nbsp;&nbsp;CAPACITY
+</div>
+
+<div class="row">
+	<div id="map" class="shadow">
+	</div>
+</div>
+
+<div class="container">
+	<div class="feed">
+		<div class="col-md-6 col-md-offset-3">
+			<% for document in @getCollection('posts').toJSON(): %>
+				<div class="row">
+					<div class="col-md-2">
+						<img class="post-icon" src="/images/<%- document.category %>.png">
+					</div>
+					<div class="col-md-10">
+						<h3>
+							<a href="<%- document.url %>">
+								<%- document.title %>
+							</a>
+						</h3>
+
+						<h4>
+							<%- document.location %>
+						</h4>
+					</div>
+				</div>
+				<hr>
+			<% end %>
+		</div>
+	</div>
+</div>

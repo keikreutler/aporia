@@ -2,22 +2,21 @@
 layout: default
 ---
 
-<article id="post" class="post">
-	<h1><%= @document.title %></h1>
-	<div class="post-content"><%- @content %></div>
-</article>
 
-<footer>
-	<% if  @document.relatedDocuments and @document.relatedDocuments.length: %>
-	<section id="related">
-		<h3>Related Posts</h3>
-		<nav class="linklist">
-			<% for document in @document.relatedDocuments: %>
-				<li><span><%= document.date.toDateString() %></span>
-				&raquo;
-				<a href="<%= document.url %>"><%= document.title %></a></li>
-			<% end %>
-		</nav>
-	</section>
-	<% end %>
-</footer>
+	<div class="col-md-6 col-md-offset-3">
+			<div class="post">
+				<a name="52.5075419-13.4261419"></a>
+				<img class="post-icon" src="/images/<%- @document.category %>.png">
+				<h4>
+					<%- @document.location %>
+				</h4>
+
+				<h2>
+					<%- @document.title %>
+				</h2>
+
+				<%- @content %>
+
+				<hr>
+			</div>
+	</div>

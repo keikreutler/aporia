@@ -22,7 +22,7 @@
 	<meta name="viewport" content="width=device-width" />
 
 	<!-- Icons -->
-	<link rel="shortcut icon" href="images/icons/favicon.png">
+	<link rel="shortcut icon" href="/images/icons/favicon.png">
 		
 	<!-- Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -39,17 +39,17 @@
 <body>
 
 		<!-- Content -->
-		<section id="content" class="content">
-			<%- @content %>
-		</section>
+		<%- @content %>
+
 
 		<!-- Footer -->
 		<footer>
-			<a id="map-only">MAP</a>&nbsp;&nbsp;&nbsp;<a id="text-only">TEXT</a>&nbsp;&nbsp;&nbsp;<a href="#dne" data-toggle="modal" data-target="#dne">METRICS</a>
+			<a id="map-only" href="/map">MAP</a>&nbsp;&nbsp;&nbsp;<a id="text-only" href="/text">TEXT</a>&nbsp;&nbsp;&nbsp;<a id="past" href="/">PAST</a>
 		</footer>
 
 
 	<!-- Scripts -->
 	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
+
 </body>
 </html>
