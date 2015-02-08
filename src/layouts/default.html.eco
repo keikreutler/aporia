@@ -44,7 +44,7 @@
 
 		<!-- Footer -->
 		<footer>
-			<a id="map-only" href="/map">MAP</a>&nbsp;&nbsp;&nbsp;<a id="text-only" href="/text">TEXT</a>&nbsp;&nbsp;&nbsp;<a id="past" href="/">PAST</a>
+			<a id="map-only" href="/map">MAP</a>&nbsp;&nbsp;&nbsp;<a id="text-only" href="/text">CLIPPINGS</a>&nbsp;&nbsp;&nbsp;<a id="past" href="/">HOME</a>
 		</footer>
 
 

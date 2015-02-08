@@ -56,7 +56,7 @@ docpadConfig = {
 				"/scripts/modal.js"
 				"/scripts/map.js"
 				"/scripts/script.js"
-				"/scripts/markdown.js"
+				"//d3js.org/d3.v3.min.js"
 			]
 
 

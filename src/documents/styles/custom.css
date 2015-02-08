@@ -143,3 +143,38 @@ h1, h2, h3, h4 {
 .container {
 	margin-bottom: 100px;
 }
+
+#wellbeing {
+	display: block;
+	margin: 150px auto;
+	width: 80%;
+	text-align: center;
+	.row {
+		.col-sm-4 {
+			margin: 40px auto;
+			h4 {
+				text-align: center;
+			}
+		}
+	}
+}
+
+
+.chart rect {
+	background: -moz-linear-gradient(left, rgba(48,48,48,1) 0%, rgba(242,242,242,0.97) 11%, rgba(245,245,245,0.87) 50%, rgba(0,0,0,0.74) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(48,48,48,1)), color-stop(11%, rgba(242,242,242,0.97)), color-stop(50%, rgba(245,245,245,0.87)), color-stop(100%, rgba(0,0,0,0.74)));
+	background: -webkit-linear-gradient(left, rgba(48,48,48,1) 0%, rgba(242,242,242,0.97) 11%, rgba(245,245,245,0.87) 50%, rgba(0,0,0,0.74) 100%);
+	background: -o-linear-gradient(left, rgba(48,48,48,1) 0%, rgba(242,242,242,0.97) 11%, rgba(245,245,245,0.87) 50%, rgba(0,0,0,0.74) 100%);
+	background: -ms-linear-gradient(left, rgba(48,48,48,1) 0%, rgba(242,242,242,0.97) 11%, rgba(245,245,245,0.87) 50%, rgba(0,0,0,0.74) 100%);
+}
+.rectBG {
+	background: #EEE;
+}
+
+
+.chart text {
+  fill: #000;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+
