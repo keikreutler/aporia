@@ -2,9 +2,5 @@
 layout: 'default'
 ---
 
-<div class="location">
-	FUTURE&nbsp;&nbsp;&nbsp;CONCRETE&nbsp;&nbsp;&nbsp;CAPACITY
-</div>
-
 <div id="map" class="fullscreen">
 </div>

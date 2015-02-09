@@ -2,10 +2,6 @@
 layout: 'default'
 ---
 
-<div class="location">
-	FUTURE&nbsp;&nbsp;&nbsp;CONCRETE&nbsp;&nbsp;&nbsp;CAPACITY
-</div>
-
 <div class="row">
 	<div id="map" class="shadow">
 	</div>

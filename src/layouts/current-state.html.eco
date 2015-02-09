@@ -36,7 +36,7 @@
 	<!-- Styles -->
 	<%- @getBlock('styles').add(@site.styles).toHTML() %>
 </head>
-<body>
+<body id="current-state">
 
 		<div class="location">
 			<a href="/being">CURRENT STATE</a>
