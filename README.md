@@ -9,8 +9,8 @@ Simple and flexible HTML, CSS, and Javascript for popular user interface compone
 1. Clone the project and run the server
 
 	``` bash
-	git clone git://github.com/docpad/twitter-bootstrap.docpad.git
-	cd twitter-bootstrap.docpad
+	git clone git://github.com/keikreutler/aporia
+	cd aporia
 	npm install
 	docpad run
 	```
@@ -33,10 +33,6 @@ If you are wanting to open-source your website, we suggest using the [Creative C
 
 	Unless stated otherwise, all content is licensed under the [Creative Commons Attribution License](http://creativecommons.org/licenses/by/3.0/) and code licensed under the [MIT License](http://creativecommons.org/licenses/MIT/), © [Your Name](http://your.website)
 
-If you are wanting to close-source your website, we'd suggest using the following:
-
-	Copyright [Your Name](http://your.website). All rights reserved.
 
 Other included things such as themes and libraries are likely already licensed by their own individual licenses, so be sure to respect their licenses too.
 
-Thanks, the DocPad team loves you.
