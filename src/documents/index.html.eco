@@ -1,34 +1,116 @@
 ---
-layout: 'default'
+layout: 'current-state'
 ---
 
-<div class="row">
-	<div id="map" class="shadow">
-	</div>
+<div id="wellbeing">
+	<svg class="chart">
+	  <defs>
+	    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+	      <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+	      <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+	    </linearGradient>
+	  </defs>
+	</svg>
 </div>
 
-<div class="container">
-	<div class="feed">
-		<div class="col-md-6 col-md-offset-3">
-			<% for document in @getCollection('posts').toJSON(): %>
-				<div class="row">
-					<div class="col-md-2">
-						<img class="post-icon" src="/images/<%- document.category %>.png">
-					</div>
-					<div class="col-md-10">
-						<h3>
-							<a href="<%- document.url %>">
-								<%- document.title %>
-							</a>
-						</h3>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/scripts/bootstrap-custom.js"></script>
+<script src="//api.trello.com/1/client.js?key=31eb16d37ff9dea5bf8ec1b33e438a55&token=d46662643c552f32fde430f8f0f7105061ec9d55af458f0afa710e669a2be804"></script>
+<script>
 
-						<h4>
-							<%- document.location %>
-						</h4>
-					</div>
-				</div>
-				<hr>
-			<% end %>
-		</div>
-	</div>
-</div>
+var data = [
+	{name: "Capacity", value: 0},
+	{name: "Clarity", value: 0},
+	{name: "Focus", value: 0},
+	{name: "Anticipation", value: 0},
+	{name: "Precarity", value: 0},
+	{name: "Explore", value: 0}
+];
+
+Trello.get("boards/531efaeecfe6fcb961f6a204/lists?cards=open&attachment_fields=name,url", function(lists) {
+	$.each(lists, function(ix, list) {
+		if(list.name === "Wellbeing")
+		$.each(list.cards, function(ix, card) {
+			switch(card.name) {
+				case "Capacity":
+					data[ix].value = card.desc;
+					break;
+				case "Clarity":
+					data[ix].value = card.desc;
+					break;
+				case "Concentration":
+					data[ix].value = card.desc;
+					break;
+				case "Anticipation":
+					data[ix].value = card.desc;
+					break;
+				case "Precarity":
+					data[ix].value = card.desc;
+					break;
+				case "Urge for Going":
+					data[ix].value = card.desc;
+					break;
+			}
+		});
+	});
+	drawChart();
+});
+
+function drawChart() {
+	var height = 400,
+	    width = 1000;
+
+	var barWidth = (width / data.length) - 20;
+
+	var y = d3.scale.linear()
+		.domain([0, 30])
+	    .range([height, 0]);
+
+	var chart = d3.select(".chart")
+	    .attr("width", width)
+	    .attr("height", height);
+
+	var barSpacing = barWidth + 20;
+
+	var bar = chart.selectAll("g")
+	    .data(data)
+	  .enter().append("g")
+	    .attr("transform", function(d, i) { return "translate(" + i * barSpacing + ", 0)"; });
+
+	bar.append("rect")
+		.attr("y", function(d) { return y(d.value); })
+	    .attr("width", barWidth - 1)
+	    .attr("id", function(d) { return d.name; })
+	    .attr("height", function(d) { return height - y(d.value); });
+
+	bar.append("text")
+	    .attr("y", function(d) { return y(d.value) + 20; })
+	    .attr("x", barWidth / 2)
+	    //.attr("dy", ".6em")
+	    .text(function(d) { return d.name; });
+};
+
+/*var ratings = [];
+var dates = [];
+
+$.ajax({
+        type: "GET",
+        url: '//moodpanda.com/api/user/feed/data.ashx?userid=7591422&from=2015-01-08&to=2015-02-08&format=xml&dateorder=asc&key=7d8bd0ca-d582-4976-87e2-23c94d5f73cf',
+        dataType: "xml",
+        success: function (xml) { parseCarseXml(xml); }
+    });
+
+function parseCardsXml(xml) {
+	$console.log("success");
+	$(xml).find('MoodRating').each(function(i,j)
+		{
+			ratings[i] = $(j).find("Rating").text();
+			dates[i] = $(j).find("Date").text();
+		}
+	)
+};
+
+$('#Clarity').tooltip({title: 'Hello'});*/
+
+</script>

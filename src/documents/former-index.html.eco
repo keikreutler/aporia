@@ -22,10 +22,10 @@ layout: 'current-state'
 var data = [
 	{name: "Capacity", value: 0},
 	{name: "Clarity", value: 0},
-	{name: "Concentration", value: 0},
+	{name: "Focus", value: 0},
 	{name: "Anticipation", value: 0},
 	{name: "Precarity", value: 0},
-	{name: "Desire to Wander", value: 0}
+	{name: "Explore", value: 0}
 ];
 
 Trello.get("boards/531efaeecfe6fcb961f6a204/lists?cards=open&attachment_fields=name,url", function(lists) {
@@ -48,7 +48,7 @@ Trello.get("boards/531efaeecfe6fcb961f6a204/lists?cards=open&attachment_fields=n
 				case "Precarity":
 					data[ix].value = card.desc;
 					break;
-				case "Desire to Wander":
+				case "Urge for Going":
 					data[ix].value = card.desc;
 					break;
 			}
@@ -113,4 +113,4 @@ function parseCardsXml(xml) {
 
 $('#Clarity').tooltip({title: 'Hello'});*/
 
-</script>
+</script>	

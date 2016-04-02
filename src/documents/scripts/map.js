@@ -158,7 +158,7 @@ var posts = [ { "type" : "Feature",
 ];
 
 
-L.mapbox.accessToken = 'pk.eyJ1IjoiZ2FtZXJhIiwiYSI6IjNlclVnZDAifQ.a8PjkEfE5i2aOShPawCy1A';
+/*L.mapbox.accessToken = 'pk.eyJ1IjoiZ2FtZXJhIiwiYSI6IjNlclVnZDAifQ.a8PjkEfE5i2aOShPawCy1A';
 var layer = new L.StamenTileLayer("toner");
 var map = L.mapbox.map('map', 'extinctly.f3ad5588', {
     zoomControl: true,
@@ -185,4 +185,4 @@ L.geoJson(posts, {
 
 function onEachFeature(feature, featureLayer) {
     featureLayer.bindPopup('<a href="#"><h1>'+ feature.properties.name +'</h1></a>');
-}
+}*/

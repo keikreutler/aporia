@@ -46,11 +46,6 @@
 		<%- @content %>
 
 
-		<!-- Footer -->
-		<footer>
-			<a id="past" href="/">HOME</a>&nbsp;&nbsp;&nbsp;<a id="map-only" href="/map">MAP</a>&nbsp;&nbsp;&nbsp;<a id="text-only" href="/text">CLIPPINGS</a>
-		</footer>
-
 
 	<!-- Scripts -->
 	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>

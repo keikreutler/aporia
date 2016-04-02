@@ -24,16 +24,16 @@ docpadConfig = {
 
 			# The website description (for SEO)
 			description: """
-				A collection of thoughts, some of which are my own.
+				A human readable display of my current state.
 				"""
 
 			# The website keywords (for SEO) separated by commas
 			keywords: """
-				aporia, mapping, openstreetmap, keikreutler,
+				aporia, mapping,
 				"""
 
 			# The website author's name
-			author: "Kei Kreutler"
+			author: "Companion Specie"
 
 			# The website author's email
 			email: "kei@ourmachine.net"
